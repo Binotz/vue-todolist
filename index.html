@@ -16,8 +16,8 @@
 <body>
     <div id="root">
         <div class="todos-inputs">
-            <input type="text" placeholder="Nuovo Todo">
-            <button>Aggiungi</button>
+            <input type="text" placeholder="Nuovo Todo" v-model="inputTodo">
+            <button @click="addTodo()">Aggiungi</button>
         </div>
         <div class="todos-container">
             <ul>

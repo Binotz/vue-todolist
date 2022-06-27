@@ -14,6 +14,7 @@
 var app = new Vue({
     el:'#root',
     data:{
+        inputTodo: null,
         todos:[
             {
                 text: 'fare la milestone 1',
@@ -25,18 +26,29 @@ var app = new Vue({
             },
             {
                 text: 'fare la milestone 3',
-                done: false
+                done: true
             },
             {
-                text: 'fare la milestone 4',
+                text: 'fare la milestone 4 (che non esiste)',
                 done: false
             },
         ]
     },
     methods:{
-        //rimuovo l'elemento dalla lista in base alla sua posizione (alla pressione sulla X)
+        //MILESTONE 2
+        //removeTodo: rimuovo l'elemento dalla lista in base alla sua posizione (alla pressione sulla X)
         removeTodo: function(index){
             this.todos.splice(index,1);
+        },
+        //MILESTONE 3
+        // addTodo: aggiungo un todo in base all'input dell'utente
+        addTodo: function(){
+            if (this.inputTodo !== null){
+                this.todos.push({
+                    text: this.inputTodo,
+                    done: false
+                });
+            }
         }
     }
 });
