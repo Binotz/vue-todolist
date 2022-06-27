@@ -3,3 +3,40 @@
     margin: 0;
     box-sizing: border-box;
 }
+ul{
+    list-style-type: none;
+    padding: 1rem;
+}
+/* Main */
+.todos-inputs{
+    padding: 2rem;
+    text-align: center;
+}
+.todos-inputs>*{
+    margin-right: 1rem;
+    padding: 1rem;
+    border-radius: 20px;
+}
+.todos-inputs input{
+    width: 300px;
+}
+.todos-container{
+    width: 75%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #f4f7f7;
+}
+li{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #dadee2;
+}
+span{
+    font-size: 20px;
+}
+/* MILESTONE 1 */
+.done{
+    text-decoration: line-through;
+}

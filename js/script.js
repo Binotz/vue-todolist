@@ -17,11 +17,11 @@ var app = new Vue({
         todos:[
             {
                 text: 'fare la milestone 1',
-                done: false
+                done: true
             },
             {
                 text: 'fare la milestone 2',
-                done: false
+                done: true
             },
             {
                 text: 'fare la milestone 3',
@@ -34,6 +34,9 @@ var app = new Vue({
         ]
     },
     methods:{
-
+        //rimuovo l'elemento dalla lista in base alla sua posizione (alla pressione sulla X)
+        removeTodo: function(index){
+            this.todos.splice(index,1);
+        }
     }
 });
