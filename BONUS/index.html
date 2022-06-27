@@ -22,7 +22,7 @@
         <div class="todos-container">
             <ul>
                 <li v-for="todo,index in todos">
-                    <span :class="{done: todo.done}">{{ todo.text }}</span>
+                    <span :class="{done: todo.done}" @click="markAsDone(index)">{{ todo.text }}</span>
                     <span @click="removeTodo(index)"><i class="fa-solid fa-xmark"></i></span>
                 </li>
             </ul>
