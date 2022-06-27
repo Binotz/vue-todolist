@@ -43,12 +43,12 @@ var app = new Vue({
         //MILESTONE 3
         // addTodo: aggiungo un todo in base all'input dell'utente
         addTodo: function(){
-            if (this.inputTodo !== null){
+            if (!(this.inputTodo === null)){
                 this.todos.push({
                     text: this.inputTodo,
                     done: false
                 });
-                this.inputTodo= ''
+                this.inputTodo = null
             }
         },
         //BONUS 2
